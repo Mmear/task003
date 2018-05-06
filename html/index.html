@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../fonts/css/font-awesome.min.css">
+    <script src="../js/localStorage.js"></script>
+    <script src="../js/bean.js"></script>
+    <script src="../js/main.js"></script>
+    <title>DoitLatter</title>
+</head>
+<body>
+    <div class="main-body full-height">
+        <div class="cons-ver full-height">
+            <!-- 顶部栏 -->
+            <div class="top-frame">
+                <div class="cons-hor">
+                    <div class="header">
+                        <h1>DoitLater
+                            <span>
+                                <i class="fa fa-bell-o"></i>
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <!-- 下方区域 -->
+            <div class="bottom-frame">
+                <div class="cons-hor full-height">
+                    <!-- 左侧栏，包括分类列表和任务列表 -->
+                    <div class="sidebar">
+                        <div class="task-cate cons-ver">               
+                            <div class="cate-item" id="all-task">
+                                <span>
+                                    <i class="fa fa-reorder"></i> 所有任务<span class="task-num">(40)</span>
+                                </span>
+                            </div>
+                            <div class="cate-list">
+                                <div class="cate-item" id="cate_default">
+                                    <span>
+                                       <i class="fa fa-folder"></i> 默认分类<span class="task-num">(10)</span>
+                                    </span>
+                                </div>
+                                <div class="cate-item" id="cate_study">
+                                    <span>
+                                       <i class="fa fa-folder"></i> 学习<span class="task-num">(20)</span>
+                                    </span>
+                                    <button class="delete-cate">
+                                        <i class="fa fa-close"></i>
+                                    </button>
+
+                                    <!-- 子类名不能与父类相同 -->
+                                    <div class="cate-child">
+                                        <div class="cate-item" id="cate_java">
+                                            <span>
+                                                <i class="fa fa-folder"></i> Java<span class="task-num">(10)</span>
+                                            </span>
+                                            <button class="delete-cate">
+                                                <i class="fa fa-close"></i>
+                                            </button>
+
+                                            <div class="cate-child">
+                                                <div class="cate-item" id="java-cate-1">
+                                                <span>
+                                                    <i class="fa fa-folder"></i> 进程通信
+                                                </span>
+                                                    <button class="delete-cate">
+                                                        <i class="fa fa-close"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- 新建的分类id格式统一为"xxx-cate" -->
+                            </div>
+
+                            <div class="add-btn" id="add-cate">      
+                                <button>
+                                    <span>
+                                        <i class="fa fa-plus"></i>
+                                        新建分类
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="task-nav cons-ver">
+                            <div class="task-status">
+                                <div class="status-item" id="all">所有</div>
+                                <div class="status-item" id="undone">未完成</div>
+                                <div class="status-item" id="finished">已完成</div>
+                            </div>
+
+                            <div class="task-list cons-ver">
+                                <div class="task-list-date">
+                                    <span>
+                                        <i class="fa fa-calendar-o"></i>
+                                        2018-04-02
+                                    </span>
+                                </div>
+                                <ul class="task-list-ul">
+                                    <li class="task-list-item">
+                                        <span>
+                                            <i class="fa fa-file-o"></i> Java
+                                            <span class="task-num">(10)</span>
+                                        </span>
+                                    </li>
+                                    <li class="task-list-item">
+                                        <span>
+                                            <i class="fa fa-file-o"></i> Java
+                                            <span class="task-num">(10)</span>
+                                        </span>
+                                    </li>
+                                    <li class="task-list-item">
+                                        <span>
+                                            <i class="fa fa-file-o"></i> Java
+                                            <span class="task-num">(10)</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="task-list cons-ver">
+                                <div class="task-list-date">
+                                    <span>
+                                        <i class="fa fa-calendar-o"></i>
+                                        2018-04-02
+                                    </span>
+                                </div>
+                                <ul class="task-list-ul">
+                                    <li class="task-list-item">
+                                        <span>
+                                            <i class="fa fa-file-o"></i> Java
+                                            <span class="task-num">(10)</span>
+                                        </span>
+                                    </li>
+                                    <li class="task-list-item">
+                                        <span>
+                                            <i class="fa fa-file-o"></i> Java
+                                            <span class="task-num">(10)</span>
+                                        </span>
+                                    </li>
+                                    <li class="task-list-item">
+                                        <span>
+                                            <i class="fa fa-file-o"></i> Java
+                                            <span class="task-num">(10)</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="task-list cons-ver">
+                                <div class="task-list-date">
+                                    <span>
+                                        <i class="fa fa-calendar-o"></i>
+                                        2018-04-02
+                                    </span>
+                                </div>
+                                <ul class="task-list-ul">
+                                    <li class="task-list-item">
+                                        <span>
+                                            <i class="fa fa-file-o"></i> Java
+                                            <span class="task-num">(10)</span>
+                                        </span>
+                                    </li>
+                                    <li class="task-list-item">
+                                        <span>
+                                            <i class="fa fa-file-o"></i> Java
+                                            <span class="task-num">(10)</span>
+                                        </span>
+                                    </li>
+                                    <li class="task-list-item">
+                                        <span>
+                                            <i class="fa fa-file-o"></i> Java
+                                            <span class="task-num">(10)</span>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="add-btn" id="add-task">
+                                <button>
+                                    <span>
+                                        <i class="fa fa-plus"></i>
+                                        新建任务
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 右侧栏 任务内容区 -->
+                    <div class="content-area">
+                        <div class="task-inside cons-ver">
+                            <div class="task-head">
+                                <h3 >task-name</h3>
+                                <span class="task-option" id="done-opt">
+                                    <abbr title="完成">
+                                        <i class="fa fa-check"></i>
+                                    </abbr>
+                                </span>
+                                <span class="task-option" id="edit-opt">
+                                    <abbr title="编辑">
+                                        <i class="fa fa-edit"></i>
+                                    </abbr>
+                                </span>
+                            </div>
+                            <div class="task-info">
+                                <span class="create-date">创建日期：2018-04-02</span>
+                                <span class="done-date">完成日期：2018-05-16</span>
+                            </div>
+                            <div class="task-text">
+                                <textarea name="task-content" class="task-content" id="" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

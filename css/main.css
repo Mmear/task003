@@ -1,0 +1,261 @@
+html,body {
+    height: 100%;
+}
+body {
+    margin: 0px;
+    min-height: 600px;
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);    
+    
+    font-family: "Microsoft Yahei";
+    font-size: 15px;
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.full-height {
+    height: 100%;
+}
+.cons-hor, .cons-ver {
+    display: flex;
+    /* flex-direction: row;
+    flex-wrap: nowrap; */
+}
+.cons-ver {
+    flex-direction: column;
+}
+.top-frame {
+    padding: 5px;
+    display: flex;
+    flex: 0 0 40px;
+}
+/*顶部区域*/
+.header {
+}
+.header > h1{
+    color: #fff;
+    height: 100%;
+    transition: color 400ms; 
+    font-size: 2.0em;       
+}
+.header > h1:hover {
+    color: rgb(188, 0, 45);
+}
+/*顶部区域结束*/
+.top-frame > .cons-hor {
+    align-items: center;
+}
+.bottom-frame {
+    flex: 1;
+    color: #fff;
+}
+.sidebar, 
+.task-cate,
+.task-nav,
+.content-area,
+.task-inside {
+    height: 100%;
+    font-size: 1.0em;
+}
+/*侧边栏开始*/
+.sidebar {
+    display: flex;
+    flex: 0 0 500px;
+    background-image: linear-gradient(45deg, #E87A90 0%, #fad0c4 99%, #fad0c4 100%);
+    /* background-color: #FEDFE1; */
+    /* font-family: "幼圆", sans-serif; */
+}
+.task-cate, .task-nav {
+    box-sizing: border-box;
+}
+.task-cate {
+    flex: 0 0 250px;
+}
+.cate-list, .task-list{
+    flex: 1;
+}
+#all-task {
+    margin-top: 10px;
+}
+.cate-item {
+    padding: 5px 0 5px 5px;
+    min-height: 35px;
+    line-height: 35px;
+    transition: all 150ms;
+    cursor: pointer;
+}
+.cate-child {
+    padding-left: 3px;
+}
+/* .cate-item > span:hover {
+    color: rgb(188, 0, 45);
+} */
+.cate-item:hover > span:nth-child(1) {
+    color: rgb(188, 0, 45);
+}
+/* .cate-item:hover {
+    background-color: #fff;
+    color: rgb(188, 0, 45);
+} */
+.delete-cate {
+    background-color: inherit;
+   /* color: inherit; */
+    float: right;
+    line-height: 35px;
+    font-size: 18px;
+}
+
+
+/*中间栏开始*/
+.task-nav {
+    flex: 0 0 250px;
+    border-right: 1px solid #E87A90;
+    border-left: 1px solid #E87A90;
+    box-sizing: border-box;
+}
+.task-status .status-item {
+    display: inline-block;
+    margin: 0 0 1px 1px;
+    flex-grow: 1;
+    line-height: 30px;
+    text-align: center;
+    transition: all 300ms;
+    cursor: pointer;
+}
+.task-status .status-item:hover {
+    background-color: #fff;
+    color: rgb(188, 0, 45);
+}
+.task-status {
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+}
+.task-list:nth-child(2) {
+    padding-top: 0;
+}
+.task-list {
+    display: flex;
+    padding: 5px 0;
+    flex: 1;
+    flex-direction: column;
+}
+.task-list-ul {
+    margin: 0 0 0 5px;
+    padding: 0;
+    height: 100%;
+    overflow: auto;
+}
+.task-list-ul::-webkit-scrollbar {
+    width: 10px;
+}
+.task-list-ul::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+.task-list-ul::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+.task-list li {
+    list-style: none;
+}
+.task-list-date {
+    font-weight: bold;
+    background-color: #E87A90;
+    padding: 3px;
+    height: 25px;
+    line-height: 25px;
+}
+.task-list-item {
+    margin-top: 5px;
+    padding: 3px 0 3px 0;
+    cursor: pointer;
+}
+.task-list-item:hover {
+    color: rgb(188, 0, 45);
+}
+.delete-cate:hover {
+    color: #fff;
+}
+/*中间栏结束*/
+
+.add-btn {
+    /* align-self: flex-start; */
+}
+.add-btn, .add-btn > button {
+    height: 40px;
+    width: 100%;
+}
+.add-btn > button {
+    text-align: left;
+    font-size: 16px;
+    color: #fff;
+    background-color: #E87A90;
+    transition: all 200ms;
+   /* color: rgb(188, 0, 45); */
+}
+.add-btn > button:hover {
+    background-color: #fff;
+    color: rgb(188, 0, 45);
+}
+/*侧边栏结束*/
+/*主要内容区开始*/
+.content-area {
+    background-color: #fff;
+    color: #000;
+    flex: 1;
+}
+.task-head {
+    background-color: #EEA9A9;
+    flex: 1;
+    border-bottom: 1px dotted #E87A90;
+}
+.task-head h3 {
+    display: inline-block;
+    padding-left: 1em;
+    font-size: 20px;
+}
+.task-head .task-option {
+    font-size: 1.3em;
+    margin-top: 1em;
+    margin-right: 1em;
+    float: right;
+    cursor: pointer;
+
+}
+.task-head .task-option:hover {
+    color: #fff;
+}
+.task-info {
+    flex: 1;
+    background-color: #EEA9A9;
+    display: flex;
+    justify-content: space-between;
+}
+.task-info span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+.task-text {
+    flex: 12;
+    overflow: auto;
+}
+
+.task-content {
+    display: block;
+    font: 16px "Microsoft Yahei";
+    height: 100%;
+    width: 100%;
+    padding: 5px 5px;
+    border: none;
+    box-sizing: border-box;
+}
+.task-content:focus {
+    outline: none;
+}
+/*主要内容区结束*/
